@@ -1,0 +1,36 @@
+﻿@model HotelRoomBooking.Models.Customer
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" asp-controller="Customer">
+
+    <label asp-for="CustomerFirstName"></label>
+    <input type="text" asp-for="CustomerFirstName" />
+    <br />
+    <label asp-for="CustomerLastName"></label>
+    <input type="text" asp-for="CustomerLastName" />
+    <br />
+    <label asp-for="CustomerAddress"></label>
+    <input type="text" asp-for="CustomerAddress" />
+    <br />
+    <label asp-for="CustomerEmailId"></label>
+    <input type="text" asp-for="CustomerEmailId" />
+    <br />
+    <label asp-for="CustomerGender"></label>
+    <input type="text" asp-for="CustomerGender" />
+    <br />
+    <label asp-for="CustomerContactNumber"></label>
+    <input type="text" asp-for="CustomerContactNumber" />
+    <br />
+    <label asp-for="CustomerDateOfBirth"></label>
+    <input type="text" asp-for="CustomerDateOfBirth" />
+    <br />
+    <label asp-for="CustomerPassword"></label>
+    <input type="text" asp-for="CustomerPassword" />
+    <br />
+    <input type="submit" value="Edit Customer" />
+</form>

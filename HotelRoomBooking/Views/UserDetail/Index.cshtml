@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HotelRoomBooking.Models.UserDetail>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<h3>@Html.ActionLink("Click here to Insert New User Details", "Create", "UserDetail")</h3>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserType)
+            </th>
+            <th>
+               Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "UserDetail", new { id = item.UserId }) |
+                @Html.ActionLink("Edit", "Edit", "UserDetail", new { id = item.UserId }) |
+                @Html.ActionLink("Delete", "Delete", "UserDetail", new { id = item.UserId })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
